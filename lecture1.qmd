@@ -1,0 +1,199 @@
+---
+title: "Object-Oriented Programming 1"
+format: revealjs
+editor: visual
+execute:
+  echo: True
+  eval : False
+---
+
+## 목차
+
+::: incremental
+-   Object-Oriented Programming이란?
+-   왜 OOP인가?
+-   oop의 4가지 특징
+-   oop의 핵심 개념 1 : object & class
+-   oop의 핵심 개념 2 : Constructor
+:::
+
+## Object-Oriented Programming이란?
+
+<br/>
+
+::: {.fragment .fade-in-then-semi-out}
+**Q. Object-Oriented Programming?**
+:::
+
+<br/>
+
+::: {.fragment .fade-in}
+A. 쉽게 말해, 프로그램을 객체 단위로 잘게 쪼개서 프로그래밍하는 방법.
+:::
+
+:::
+
+## 프로그래밍 3대 Paradigm
+
+<br/>
+:::incremental
+1. 절차지향 프로그래밍
+2. 객체지향 프로그래밍
+3. 함수형 프로그래밍
+:::
+
+## 프로그래밍 3대 Paradigm
+
+1. 절차지향 프로그래밍 --\> Procedural Programming(POP)
+2. 객체지향 프로그래밍 --\> Object-Oriented Programming(OOP)
+3. 함수형 프로그래밍 --\> Funtional Programming
+
+## 절차지향 프로그래밍(Procedural Programming)
+
+**일이 진행되는 순서대로 프로그래밍하는 방법**
+
+<br/>
+
+*장점*
+코드의 가독성이 좋음.
+컴퓨터의 처리구조와 비슷해 실행 속도가 빠름.
+
+<br/>
+
+*단점*
+각각의 코드가 순서에 민감하게 연결 되어있어, 유지보수 및 분석이 어려움.
+
+<br/> 
+대표적인 언어 : C, Fortran
+
+## 객체지향 프로그래밍(Object Oriented Programming)
+
+**객체 단위로 쪼개서 프로그래밍하는 방법**
+
+<br/>
+
+*장점*
+코드의 재사용이 가능.(확장, 유지보수에 용이!)
+분석과 설계의 전환이 쉬움.
+
+<br/>
+
+*단점*
+처리 속도가 상대적으로 다소 느림.
+설계에 많은 시간이 소요됨.
+
+<br/> 
+대표적인 언어 : JAVA, C++, C#
+
+## 객체지향 프로그래밍(Object Oriented Programming)
+
+**순수 함수를 사용해, 빨리 처리하는데 초점을 둔 방법**
+
+<br/>
+
+*장점*
+함수의 동작부가 간결해지기 때문에, 객체지향 프로그래밍에 비해 코드 이해도와 가독성이 좋아짐.
+테스트가 쉬움.
+
+<br/>
+
+*단점*
+외부 데이터 혹은 내부 데이터의 상태를 조작할 수 없음.
+
+<br/> 
+대표적인 언어 : Haskell, OCaml
+
+## Why are we code through Object-Oriented Programming?
+
+<br/>
+
+::: {.fragment .fade-in}
+-   현대 사회에 들어서 더 복잡한 어플리케이션에 대한 수요가 증가
+-   But, 기존의 절차지향형 프로그래밍 만으로는 현대 사회에서 요구하는 프로그램 제작에 어려움이 있음
+-   이를 보완하기 위해, '실제 세계와 비슷한 방법의 모델링'이 필요해짐
+:::
+
+<br/>
+
+::: {.fragment .fade-up}
+-   그것이 바로 **객체지향형 프로그래밍(Object-Oriented Programming)!**
+
+## oop의 핵심 개념들
+
+<br/>
+
+::: {.fragment .fade-in-then-semi-out}
+-   Abstracition
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   Inheritance
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   Polymorphism
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+-   Encapsulation
+:::
+
+## oop의 핵심 개념들
+
+<br/>
+
+-   Abstracition --\> 추상화
+-   Inheritance --\> 상속성, 재사용화
+-   Polymorphism --\> 다형성
+-   Encapsulation --\> 캡슐화
+
+## Abstracition
+
+**공통된 기능이나 속성을 묶어서 명명하는 것**
+
+<br/>
+
+::: {.fragment .fade-in}
+- 객체 하나하나를 묶어서 하나의 객체로 묶는 과정을 추상화라고 함
+
+ex) 아반떼, 소나타, 투싼이라는 클래스가 존재할 때, 이들을 하나의 클래스인 자동차로 정의하는 것!
+:::
+
+## Inheritance
+
+**상위 개념의 특징을 하위 개념이 물려받는 것**
+
+<br/>
+
+::: {.fragment .fade-in}
+- 부모 객체로부터 기능을 물려받는 것을 의미한다.
+
+ex) 가솔린으로 움직이는 자동차라는 부모 클래스로부터 손님을 태우는 기능을 가진 택시라는 자녀 클래스를 생성하는 것!
+:::
+
+## Polymorohism
+
+**부모 클래스에서 물려받은 가상 함수를 자녀 클래스 내에서 오버라이딩 되어 사용되는 것**
+
+<br/>
+
+::: {.fragment .fade-in}
+- 부모 클래스에서 정의된 함수를 자녀 클래스에서도 사용하는 것!
+
+ex) 자동차, 트럭, 레이스카 모두 움직이는 기능이 있기 때문에, 동일하게 움직일 수 있다!
+:::
+
+## Encapsulation
+
+**변수와 함수를 하나로 묶은 후, 실제 구현 내용의 일부를 외부에 감추는 것**
+
+<br/>
+
+::: {.fragment .fade-in}
+- 객체의 속성과 기능을 하나로 묶는 것
+- 추가로, 객체의 일부 구현 내용을 외부로부터 수정하지 못하도록 막는 것
+:::
+
+
+
+
