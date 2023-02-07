@@ -7,7 +7,7 @@
 <link href="lecture1_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="lecture1_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="lecture1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.1.189">
+  <meta name="generator" content="quarto-1.2.335">
 
   <title>Object-Oriented Programming 1</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,70 +27,6 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="lecture1_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="lecture1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -386,18 +322,21 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Object-Oriented Programming 1</h1>
-</section>
 
+<div class="quarto-title-authors">
+</div>
+
+</section>
 <section id="목차" class="slide level2">
 <h2>목차</h2>
 <p><br></p>
 <div>
 <ul>
 <li class="fragment">Object-Oriented Programming이란?</li>
-<li class="fragment">왜 OOP인가?</li>
-<li class="fragment">oop의 4가지 특징</li>
+<li class="fragment">프로그래밍 3대 paradigm</li>
+<li class="fragment">oop를 시작하기 위해선?</li>
 <li class="fragment">oop의 핵심 개념 1 : object &amp; class</li>
 <li class="fragment">oop의 핵심 개념 2 : Constructor</li>
 </ul>
@@ -410,13 +349,15 @@
 <p><strong>Q. Object-Oriented Programming?</strong></p>
 </div>
 <p><br></p>
+<p><br></p>
 <div class="fragment fade-in">
 <p>A. 쉽게 말해, 프로그램을 객체 단위로 잘게 쪼개서 프로그래밍하는 방법.</p>
 </div>
 </section>
 <section id="프로그래밍-3대-paradigm" class="slide level2">
 <h2>프로그래밍 3대 Paradigm</h2>
-<p><br> <br></p>
+<p><br></p>
+<p><br></p>
 <div>
 <p><strong>1. 절차지향 프로그래밍</strong></p>
 <p><strong>2. 객체지향 프로그래밍</strong></p>
@@ -425,7 +366,8 @@
 </section>
 <section id="프로그래밍-3대-paradigm-1" class="slide level2">
 <h2>프로그래밍 3대 Paradigm</h2>
-<p><br> <br></p>
+<p><br></p>
+<p><br></p>
 <p><strong>1. 절차지향 프로그래밍</strong> –&gt; Procedural Programming</p>
 <p><strong>2. 객체지향 프로그래밍</strong> –&gt; Object-Oriented Programming</p>
 <p><strong>3. 함수형 프로그래밍</strong> –&gt; Funtional Programming</p>
@@ -433,18 +375,22 @@
 <section id="절차지향-프로그래밍" class="slide level2">
 <h2>절차지향 프로그래밍</h2>
 <p><strong>일이 진행되는 순서대로 프로그래밍하는 방법</strong></p>
+<p><br></p>
 <div class="fragment fade-in">
 <p><em>장점</em></p>
-<p>코드의 가독성이 좋음.</p>
-<p>컴퓨터의 처리구조와 비슷해 실행 속도가 빠름.</p>
+<ul>
+<li>코드의 가독성이 좋음.</li>
+<li>컴퓨터의 처리구조와 비슷해 실행 속도가 빠름.</li>
+</ul>
 </div>
 <div class="fragment fade-in">
 <p><em>단점</em></p>
-<p>각각의 코드가 순서에 민감하게 연결 되어있어, 유지보수 및 분석이 어려움.</p>
+<ul>
+<li>각각의 코드가 순서에 민감하게 연결 되어있어, 유지보수 및 분석이 어려움.</li>
+</ul>
 </div>
-<p><br></p>
 <div class="fragment fade-up">
-<p>대표적인 언어 : C, Fortran</p>
+<p>–&gt; 대표적인 언어 : C, Fortran</p>
 </div>
 </section>
 <section id="객체지향-프로그래밍" class="slide level2">
@@ -453,17 +399,20 @@
 <p><br></p>
 <div class="fragment fade-in">
 <p><em>장점</em></p>
-<p>코드의 재사용이 가능.(확장, 유지보수에 용이!)</p>
-<p>분석과 설계의 전환이 쉬움.</p>
+<ul>
+<li>코드의 재사용이 가능.(확장, 유지보수에 용이!)</li>
+<li>분석과 설계의 전환이 쉬움.</li>
+</ul>
 </div>
 <div class="fragment fade-in">
 <p><em>단점</em></p>
-<p>처리 속도가 상대적으로 다소 느림.</p>
-<p>설계에 많은 시간이 소요됨.</p>
+<ul>
+<li>처리 속도가 상대적으로 다소 느림.</li>
+<li>설계에 많은 시간이 소요됨.</li>
+</ul>
 </div>
-<p><br></p>
 <div class="fragment fade-up">
-<p>대표적인 언어 : JAVA, C++, C#</p>
+<p>–&gt; 대표적인 언어 : JAVA, C++, C#</p>
 </div>
 </section>
 <section id="함수형-프로그래밍" class="slide level2">
@@ -472,15 +421,19 @@
 <p><br></p>
 <div class="fragment fade-in">
 <p><em>장점</em></p>
-<p>함수의 동작부가 간결해지기 때문에, 객체지향 프로그래밍에 비해 코드 이해도와 가독성이 좋아짐.</p>
-<p>테스트가 쉬움.</p>
+<ul>
+<li>함수의 동작부가 간결해지기 때문에, 객체지향 프로그래밍에 비해 코드 이해도와 가독성이 좋아짐.</li>
+<li>테스트가 쉬움.</li>
+</ul>
 </div>
 <div class="fragment fade-in">
 <p><em>단점</em></p>
-<p>외부 데이터 혹은 내부 데이터의 상태를 조작할 수 없음.</p>
+<ul>
+<li>외부 데이터 혹은 내부 데이터의 상태를 조작할 수 없음.</li>
+</ul>
 </div>
 <div class="fragment fade-up">
-<p>대표적인 언어 : Haskell, OCaml</p>
+<p>–&gt; 대표적인 언어 : Haskell, OCaml</p>
 </div>
 </section>
 <section id="why-are-we-code-through-object-oriented-programming" class="slide level2">
@@ -497,168 +450,6 @@
 <ul>
 <li>그것이 바로 <strong>객체지향형 프로그래밍(Object-Oriented Programming)!</strong></li>
 </ul>
-</div>
-</section>
-<section id="oop의-핵심-개념들" class="slide level2">
-<h2>oop의 핵심 개념들</h2>
-<p><br></p>
-<div>
-<ul>
-<li class="fragment">Abstracition</li>
-<li class="fragment">Inheritance</li>
-<li class="fragment">Polymorphism</li>
-<li class="fragment">Encapsulation</li>
-</ul>
-</div>
-</section>
-<section id="oop의-핵심-개념들-1" class="slide level2">
-<h2>oop의 핵심 개념들</h2>
-<p><br></p>
-<ul>
-<li>Abstracition –&gt; 추상화</li>
-<li>Inheritance –&gt; 상속성, 재사용화</li>
-<li>Polymorphism –&gt; 다형성</li>
-<li>Encapsulation –&gt; 캡슐화</li>
-</ul>
-</section>
-<section id="abstracition" class="slide level2">
-<h2>Abstracition</h2>
-<p><strong>공통된 기능이나 속성을 묶어서 명명하는 것</strong></p>
-<p><br></p>
-<div class="fragment fade-in">
-<ul>
-<li>객체 하나하나를 묶어서 하나의 객체로 묶는 과정을 추상화라고 함</li>
-</ul>
-<p>ex) 아반떼, 소나타, 투싼이라는 클래스가 존재할 때, 이들을 하나의 클래스인 자동차로 정의하는 것!</p>
-</div>
-</section>
-<section id="inheritance" class="slide level2">
-<h2>Inheritance</h2>
-<p><strong>상위 개념의 특징을 하위 개념이 물려받는 것</strong></p>
-<p><br></p>
-<div class="fragment fade-in">
-<ul>
-<li>부모 객체로부터 기능을 물려받는 것을 의미한다.</li>
-</ul>
-<p>ex) 가솔린으로 움직이는 자동차라는 부모 클래스로부터 손님을 태우는 기능을 가진 택시라는 자녀 클래스를 생성하는 것!</p>
-</div>
-</section>
-<section id="inheritance-예시" class="slide level2">
-<h2>Inheritance 예시</h2>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> Car:</span>
-<span id="cb1-2"><a href="#cb1-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, model, price, color):</span>
-<span id="cb1-3"><a href="#cb1-3"></a>        <span class="va">self</span>.model <span class="op">=</span> model</span>
-<span id="cb1-4"><a href="#cb1-4"></a>        <span class="va">self</span>.price <span class="op">=</span> price</span>
-<span id="cb1-5"><a href="#cb1-5"></a>        <span class="va">self</span>.color <span class="op">=</span> color</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">def</span> drive(<span class="va">self</span>, speed):</span>
-<span id="cb1-8"><a href="#cb1-8"></a>        <span class="cf">if</span> speed <span class="op">&gt;</span> <span class="dv">100</span>:</span>
-<span id="cb1-9"><a href="#cb1-9"></a>            <span class="cf">return</span> <span class="st">"속도 위반"</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>        <span class="cf">else</span>:</span>
-<span id="cb1-11"><a href="#cb1-11"></a>            <span class="cf">return</span> <span class="st">"안전 운전"</span></span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="kw">class</span> Taxi(Car):</span>
-<span id="cb1-14"><a href="#cb1-14"></a>    <span class="kw">def</span> take_passengers(<span class="va">self</span>, passengers):</span>
-<span id="cb1-15"><a href="#cb1-15"></a>        <span class="cf">if</span> passengers <span class="op">&gt;</span> <span class="dv">4</span>:</span>
-<span id="cb1-16"><a href="#cb1-16"></a>            <span class="cf">return</span> <span class="st">"정원 초과"</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a>        <span class="cf">else</span>:</span>
-<span id="cb1-18"><a href="#cb1-18"></a>            <span class="cf">return</span> <span class="st">"운전 가능"</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a></span>
-<span id="cb1-20"><a href="#cb1-20"></a>taxi1 <span class="op">=</span> Taxi(<span class="st">"현대차"</span>, <span class="st">"3000만원"</span>, <span class="st">"Yellow"</span>)</span>
-<span id="cb1-21"><a href="#cb1-21"></a><span class="bu">print</span>(taxi1.take_passengers(<span class="dv">7</span>)) </span>
-<span id="cb1-22"><a href="#cb1-22"></a></span>
-<span id="cb1-23"><a href="#cb1-23"></a><span class="bu">print</span>(taxi1.drive(<span class="dv">120</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>정원 초과
-속도 위반</code></pre>
-</div>
-</div>
-</section>
-<section id="polymorohism" class="slide level2">
-<h2>Polymorohism</h2>
-<p><strong>부모 클래스에서 물려받은 가상 함수를 자녀 클래스 내에서 오버라이딩 되어 사용되는 것</strong></p>
-<p><br></p>
-<div class="fragment fade-in">
-<ul>
-<li>부모 클래스에서 정의된 함수를 자녀 클래스에서도 사용하는 것!</li>
-</ul>
-<p>ex) 자동차, 트럭, 레이스카 모두 움직이는 기능이 있기 때문에, 동일하게 움직일 수 있다!</p>
-</div>
-</section>
-<section id="polymorohism-예시" class="slide level2">
-<h2>Polymorohism 예시</h2>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">class</span> Truck:</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">def</span> drive(<span class="va">self</span>):</span>
-<span id="cb3-3"><a href="#cb3-3"></a>        <span class="bu">print</span>(<span class="st">"트럭 운행 중"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a>    <span class="kw">def</span> stop(<span class="va">self</span>):</span>
-<span id="cb3-6"><a href="#cb3-6"></a>        <span class="bu">print</span>(<span class="st">"트럭 정지"</span>)</span>
-<span id="cb3-7"><a href="#cb3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8"></a></span>
-<span id="cb3-9"><a href="#cb3-9"></a><span class="kw">class</span> Bus:</span>
-<span id="cb3-10"><a href="#cb3-10"></a>    <span class="kw">def</span> drive(<span class="va">self</span>):</span>
-<span id="cb3-11"><a href="#cb3-11"></a>        <span class="bu">print</span>(<span class="st">"버스 운행 중"</span>)</span>
-<span id="cb3-12"><a href="#cb3-12"></a></span>
-<span id="cb3-13"><a href="#cb3-13"></a>    <span class="kw">def</span> stop(<span class="va">self</span>):</span>
-<span id="cb3-14"><a href="#cb3-14"></a>        <span class="bu">print</span>(<span class="st">"버스 정지"</span>)</span>
-<span id="cb3-15"><a href="#cb3-15"></a></span>
-<span id="cb3-16"><a href="#cb3-16"></a></span>
-<span id="cb3-17"><a href="#cb3-17"></a><span class="kw">class</span> Sport_car:</span>
-<span id="cb3-18"><a href="#cb3-18"></a>    <span class="kw">def</span> drive(<span class="va">self</span>):</span>
-<span id="cb3-19"><a href="#cb3-19"></a>        <span class="bu">print</span>(<span class="st">"스포츠카 운행 중"</span>)</span>
-<span id="cb3-20"><a href="#cb3-20"></a></span>
-<span id="cb3-21"><a href="#cb3-21"></a>    <span class="kw">def</span> stop(<span class="va">self</span>):</span>
-<span id="cb3-22"><a href="#cb3-22"></a>        <span class="bu">print</span>(<span class="st">"스포츠카 정지"</span>)</span>
-<span id="cb3-23"><a href="#cb3-23"></a></span>
-<span id="cb3-24"><a href="#cb3-24"></a></span>
-<span id="cb3-25"><a href="#cb3-25"></a><span class="kw">def</span> drive_car(car):</span>
-<span id="cb3-26"><a href="#cb3-26"></a>    car.drive()</span>
-<span id="cb3-27"><a href="#cb3-27"></a></span>
-<span id="cb3-28"><a href="#cb3-28"></a></span>
-<span id="cb3-29"><a href="#cb3-29"></a>truck <span class="op">=</span> Truck()</span>
-<span id="cb3-30"><a href="#cb3-30"></a>bus <span class="op">=</span> Bus()</span>
-<span id="cb3-31"><a href="#cb3-31"></a>sport_car <span class="op">=</span> Sport_car()</span>
-<span id="cb3-32"><a href="#cb3-32"></a></span>
-<span id="cb3-33"><a href="#cb3-33"></a>drive_car(truck)</span>
-<span id="cb3-34"><a href="#cb3-34"></a>drive_car(bus)</span>
-<span id="cb3-35"><a href="#cb3-35"></a>drive_car(sport_car)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>트럭 운행 중
-버스 운행 중
-스포츠카 운행 중</code></pre>
-</div>
-</div>
-</section>
-<section id="encapsulation" class="slide level2">
-<h2>Encapsulation</h2>
-<p><strong>변수와 함수를 하나로 묶은 후, 실제 구현 내용의 일부를 외부에 감추는 것</strong></p>
-<p><br></p>
-<div class="fragment fade-in">
-<ul>
-<li>객체의 속성과 기능을 하나로 묶는 것</li>
-<li>추가로, 객체의 일부 구현 내용을 외부로부터 수정하지 못하도록 막는 것</li>
-</ul>
-</div>
-</section>
-<section id="encapsulation-예제" class="slide level2">
-<h2>Encapsulation 예제</h2>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">class</span> Mangling:</span>
-<span id="cb5-2"><a href="#cb5-2"></a></span>
-<span id="cb5-3"><a href="#cb5-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
-<span id="cb5-4"><a href="#cb5-4"></a>        <span class="va">self</span>.__set(name, age)</span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a>    <span class="kw">def</span> __set(<span class="va">self</span>, name, age):</span>
-<span id="cb5-7"><a href="#cb5-7"></a>        <span class="va">self</span>.__name <span class="op">=</span> name</span>
-<span id="cb5-8"><a href="#cb5-8"></a>        <span class="va">self</span>.__age <span class="op">=</span> age</span>
-<span id="cb5-9"><a href="#cb5-9"></a></span>
-<span id="cb5-10"><a href="#cb5-10"></a>    <span class="kw">def</span> getname(<span class="va">self</span>):</span>
-<span id="cb5-11"><a href="#cb5-11"></a>        <span class="cf">return</span> <span class="va">self</span>.__name</span>
-<span id="cb5-12"><a href="#cb5-12"></a></span>
-<span id="cb5-13"><a href="#cb5-13"></a>    <span class="kw">def</span> getage(<span class="va">self</span>):</span>
-<span id="cb5-14"><a href="#cb5-14"></a>        <span class="cf">return</span> <span class="va">self</span>.__age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="footer footer-default">
 
@@ -913,7 +704,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -951,24 +759,42 @@
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
