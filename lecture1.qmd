@@ -14,7 +14,7 @@ execute:
 ::: incremental
 -   Object-Oriented Programming이란?
 -   프로그래밍 3대 paradigm
--   oop를 시작하기 위해선?
+-   Python에서 oop란?
 -   oop의 핵심 개념 1 : object & class
 -   oop의 핵심 개념 2 : Constructor
 :::
@@ -145,3 +145,54 @@ A. 쉽게 말해, 프로그램을 객체 단위로 잘게 쪼개서 프로그래
 -   그것이 바로 **객체지향형 프로그래밍(Object-Oriented Programming)!**
 :::
 
+
+## Python에서 OOP란?
+
+<br/>
+
+::: {.fragment .fade-in}
+Q. Python에서 어떻게 객체지향 프로그래밍을 구현할 수 있나요? 
+:::
+
+<br/>
+
+:::{.fragment .fade-up}
+A. 그거슨 바로 class!
+:::
+
+
+## Python에서의 Class 구조
+
+``` {.py code-line-numbers="1|2-3|4-5"}
+class name:
+  def __init__(self): 
+    ....
+  def func(self):
+    ....
+```
+
+## oop의 핵심 개념 1 : object & class
+
+<br/>
+
+:::{.fragment .fade-up}
+```{python}
+class name:
+  def ...():
+
+```
+
+:::
+
+## oop의 핵심 개념 2 : Constructor
+
+<br/>
+
+:::{.fragment .fade-up}
+``` {.py code-line-numbers="1|2-3"}
+class name:
+  def __init__(self): 
+    ....
+```
+
+:::
