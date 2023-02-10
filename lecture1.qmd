@@ -171,6 +171,16 @@ class name:
     ....
 ```
 
+
+## oop의 핵심 개념 1 : object & class
+
+<br/>
+
+
+
+
+
+
 ## oop의 핵심 개념 1 : object & class
 
 <br/>
@@ -183,6 +193,15 @@ class name:
 ```
 
 :::
+
+
+## oop의 핵심 개념 2 : Constructor
+
+<br/>
+
+
+
+
 
 ## oop의 핵심 개념 2 : Constructor
 
