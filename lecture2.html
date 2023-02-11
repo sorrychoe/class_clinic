@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="lecture1_files/libs/clipboard/clipboard.min.js"></script>
-<script src="lecture1_files/libs/quarto-html/tabby.min.js"></script>
-<script src="lecture1_files/libs/quarto-html/popper.min.js"></script>
-<script src="lecture1_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="lecture1_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="lecture1_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="lecture1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="lecture2_files/libs/clipboard/clipboard.min.js"></script>
+<script src="lecture2_files/libs/quarto-html/tabby.min.js"></script>
+<script src="lecture2_files/libs/quarto-html/popper.min.js"></script>
+<script src="lecture2_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="lecture2_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="lecture2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="lecture2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.1.189">
 
-  <title>Object-Oriented Programming 1</title>
+  <title>Object-Oriented Programming 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="lecture1_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="lecture1_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="lecture2_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="lecture2_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -92,11 +92,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="lecture1_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="lecture1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="lecture1_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="lecture1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="lecture1_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="lecture2_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="lecture2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="lecture2_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="lecture2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="lecture2_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -387,7 +387,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Object-Oriented Programming 1</h1>
+  <h1 class="title">Object-Oriented Programming 2</h1>
 </section>
 
 <section id="목차" class="slide level2">
@@ -395,304 +395,180 @@
 <p><br></p>
 <div>
 <ul>
-<li class="fragment">Object-Oriented Programming이란?</li>
-<li class="fragment">프로그래밍 3대 paradigm</li>
-<li class="fragment">객체란 무엇인가?</li>
-<li class="fragment">oop의 핵심 개념 1 : class</li>
-<li class="fragment">oop의 핵심 개념 2 : Constructor</li>
+<li class="fragment">oop를 하기 위해선 알아야 하는 것들?</li>
+<li class="fragment">oop의 핵심 개념들</li>
+<li class="fragment">Abstraction</li>
+<li class="fragment">Inhetritance</li>
+<li class="fragment">Polymorohism</li>
+<li class="fragment">Encapsulation</li>
 </ul>
 </div>
 </section>
-<section id="object-oriented-programming이란" class="slide level2">
-<h2>Object-Oriented Programming이란?</h2>
-<p><br></p>
-<div class="fragment fade-in-then-semi-out">
-<p><strong>Q. Object-Oriented Programming?</strong></p>
-</div>
-<p><br></p>
-<p><br></p>
-<div class="fragment fade-in">
-<p>A. 쉽게 말해, 프로그램을 객체 단위로 잘게 쪼개서 프로그래밍하는 방법.</p>
-</div>
+<section id="oop를-하기-위해서-알아야-하는-것들" class="slide level2">
+<h2>oop를 하기 위해서 알아야 하는 것들?</h2>
+<p><img data-src="images\oop%20조직도.png" class="absolute" style="top: 100px; left: 250px; width: 600px; height: 650px; "></p>
 </section>
-<section id="프로그래밍-3대-paradigm" class="slide level2">
-<h2>프로그래밍 3대 Paradigm</h2>
-<p><br></p>
+<section id="oop의-핵심-개념들" class="slide level2">
+<h2>oop의 핵심 개념들</h2>
 <p><br></p>
 <div>
 <ul>
-<li class="fragment"><p><strong>1. 절차지향 프로그래밍</strong></p></li>
-<li class="fragment"><p><strong>2. 객체지향 프로그래밍</strong></p></li>
-<li class="fragment"><p><strong>3. 함수형 프로그래밍</strong></p></li>
+<li class="fragment">Abstracition</li>
+<li class="fragment">Inheritance</li>
+<li class="fragment">Polymorphism</li>
+<li class="fragment">Encapsulation</li>
 </ul>
 </div>
 </section>
-<section id="프로그래밍-3대-paradigm-1" class="slide level2">
-<h2>프로그래밍 3대 Paradigm</h2>
-<p><br></p>
+<section id="oop의-핵심-개념들-1" class="slide level2">
+<h2>oop의 핵심 개념들</h2>
 <p><br></p>
 <ul>
-<li><p><strong>1. 절차지향 프로그래밍</strong> –&gt; Procedural Programming</p></li>
-<li><p><strong>2. 객체지향 프로그래밍</strong> –&gt; Object-Oriented Programming</p></li>
-<li><p><strong>3. 함수형 프로그래밍</strong> –&gt; Funtional Programming</p></li>
+<li>Abstracition –&gt; 추상화</li>
+<li>Inheritance –&gt; 상속성, 재사용화</li>
+<li>Polymorphism –&gt; 다형성</li>
+<li>Encapsulation –&gt; 캡슐화</li>
 </ul>
 </section>
-<section id="절차지향-프로그래밍" class="slide level2 smaller">
-<h2>절차지향 프로그래밍</h2>
-<p><strong>일이 진행되는 순서대로 프로그래밍하는 방법</strong></p>
+<section id="abstracition" class="slide level2">
+<h2>Abstracition</h2>
+<p><strong>공통된 기능이나 속성을 묶어서 명명하는 것</strong></p>
 <p><br></p>
 <div class="fragment fade-in">
-<p><em>장점</em></p>
 <ul>
-<li>코드의 가독성이 좋음.</li>
-<li>컴퓨터의 처리구조와 비슷해 실행 속도가 빠름.</li>
+<li>객체 하나하나를 묶어서 하나의 객체로 묶는 과정을 추상화라고 함</li>
 </ul>
-</div>
-<div class="fragment fade-in">
-<p><em>단점</em></p>
-<ul>
-<li>각각의 코드가 순서에 민감하게 연결 되어있어, 유지보수 및 분석이 어려움.</li>
-</ul>
-</div>
-<div class="fragment fade-up">
-<p>–&gt; 대표적인 언어 : C, Fortran</p>
+<p>ex) 아반떼, 소나타, 투싼이라는 클래스가 존재할 때, 이들을 하나의 클래스인 자동차로 정의하는 것!</p>
 </div>
 </section>
-<section id="객체지향-프로그래밍" class="slide level2 smaller">
-<h2>객체지향 프로그래밍</h2>
-<p><strong>객체 단위로 쪼개서 프로그래밍하는 방법</strong></p>
+<section id="inheritance" class="slide level2">
+<h2>Inheritance</h2>
+<p><strong>상위 개념의 특징을 하위 개념이 물려받는 것</strong></p>
 <p><br></p>
 <div class="fragment fade-in">
-<p><em>장점</em></p>
 <ul>
-<li>코드의 재사용이 가능.(확장, 유지보수에 용이!)</li>
-<li>분석과 설계의 전환이 쉬움.</li>
+<li>부모 객체로부터 기능을 물려받는 것을 의미한다.</li>
 </ul>
-</div>
-<div class="fragment fade-in">
-<p><em>단점</em></p>
-<ul>
-<li>처리 속도가 상대적으로 다소 느림.</li>
-<li>설계에 많은 시간이 소요됨.</li>
-</ul>
-</div>
-<div class="fragment fade-up">
-<p>–&gt; 대표적인 언어 : JAVA, C++, C#</p>
+<p>ex) 가솔린으로 움직이는 자동차라는 부모 클래스로부터 손님을 태우는 기능을 가진 택시라는 자녀 클래스를 생성하는 것!</p>
 </div>
 </section>
-<section id="함수형-프로그래밍" class="slide level2 smaller">
-<h2>함수형 프로그래밍</h2>
-<p><strong>순수 함수를 사용해, 빨리 처리하는데 초점을 둔 방법</strong></p>
-<p><br></p>
-<div class="fragment fade-in">
-<p><em>장점</em></p>
-<ul>
-<li>함수의 동작부가 간결해지기 때문에, 객체지향 프로그래밍에 비해 코드 이해도와 가독성이 좋아짐.</li>
-<li>테스트가 쉬움.</li>
-</ul>
-</div>
-<div class="fragment fade-in">
-<p><em>단점</em></p>
-<ul>
-<li>외부 데이터 혹은 내부 데이터의 상태를 조작할 수 없음.</li>
-</ul>
-</div>
-<div class="fragment fade-up">
-<p>–&gt; 대표적인 언어 : Julia, Haskell, OCaml</p>
-</div>
-</section>
-<section id="why-are-we-code-through-object-oriented-programming" class="slide level2 smaller">
-<h2>Why are we code through Object-Oriented Programming?</h2>
-<p><br></p>
-<div class="fragment fade-in-then-semi-out">
-<ul>
-<li>현대 사회에 들어서 더 복잡한 어플리케이션에 대한 수요가 증가</li>
-<li>But, 기존의 절차지향형 프로그래밍 만으로는 현대 사회에서 요구하는 프로그램 제작에 어려움이 있음</li>
-<li>이를 보완하기 위해, ’실제 세계와 비슷한 방법의 모델링’이 필요해짐</li>
-</ul>
-</div>
-<p><br></p>
-<div class="fragment fade-up">
-<ul>
-<li>그것이 바로 <strong>객체지향형 프로그래밍(Object-Oriented Programming)!</strong></li>
-</ul>
-</div>
-</section>
-<section id="객체object란-무엇인가" class="slide level2">
-<h2>객체(object)란 무엇인가?</h2>
-<p><br></p>
-<div class="fragment fade-in-then-semi-out">
-<p>object : 프로그램에서 저장되는 모든 데이터, <strong>즉 프로그램에 저장되는 내용은 모두 Object이다!</strong></p>
-<p>또한 각 object는 <strong>identity와 type, value</strong>를 가진다!</p>
-</div>
-<p><br></p>
-<div class="fragment fade-in">
-<p>그렇다면, identity, type, value란 무엇일까?</p>
-</div>
-</section>
-<section id="객체의-속성" class="slide level2 smaller">
-<h2>객체의 속성</h2>
-<div class="fragment fade-in-then-semi-out">
-<p><strong>identity : 객체가 메모리에 저장된 위치를 가리키는 포인터, 즉 메모리의 번지수</strong></p>
-<ul>
-<li>Object의 Identity는 object의 속성 값에 관계없이 다른 객체와 구별되기 위해 존재한다!</li>
-</ul>
-</div>
-<p><br></p>
-<div class="fragment fade-in-then-semi-out">
-<p><strong>type : 객체의 내부적인 표현 형태, 즉 type에 따라 객체에게 적용가능한 연산과 Method가 달라진다.</strong></p>
-<ul>
-<li>ex) string type에게는 ‘-’ 연산자를 사용할 수 없다.</li>
-</ul>
-</div>
-<p><br></p>
-<div class="fragment fade-in">
-<p><strong>value : 객체에 정의된 값.</strong></p>
-<ul>
-<li>ex) a = 10은 프로그래밍에서 a라는 변수에 10이라는 값을 할당하는 것을 의미한다.</li>
-</ul>
-</div>
-</section>
-<section id="python에서-oop란" class="slide level2">
-<h2>Python에서 OOP란?</h2>
-<p><br></p>
-<div class="fragment fade-in">
-<p>Q. Python에서 어떻게 객체지향 프로그래밍을 구현할 수 있나요?</p>
-</div>
-<p><br></p>
-<div class="fragment fade-up">
-<p>A. class 라는 기능을 통해 구현이 가능하다!</p>
-</div>
-</section>
-<section id="python에서의-class-기본-구조" class="slide level2">
-<h2>Python에서의 Class 기본 구조</h2>
-<p><br></p>
+<section id="inheritance-예시" class="slide level2">
+<h2>Inheritance 예시</h2>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> name:</span>
-<span id="cb1-2"><a href="#cb1-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>): </span>
-<span id="cb1-3"><a href="#cb1-3"></a>    ....</span>
-<span id="cb1-4"><a href="#cb1-4"></a>    </span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="kw">def</span> func(<span class="va">self</span>):</span>
-<span id="cb1-6"><a href="#cb1-6"></a>    ....</span>
-<span id="cb1-7"><a href="#cb1-7"></a>    </span>
-<span id="cb1-8"><a href="#cb1-8"></a>  <span class="kw">def</span> ....(<span class="va">self</span>):</span>
-<span id="cb1-9"><a href="#cb1-9"></a>    ....</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">class</span> Car:</span>
+<span id="cb1-2"><a href="#cb1-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, model, price, color):</span>
+<span id="cb1-3"><a href="#cb1-3"></a>        <span class="va">self</span>.model <span class="op">=</span> model</span>
+<span id="cb1-4"><a href="#cb1-4"></a>        <span class="va">self</span>.price <span class="op">=</span> price</span>
+<span id="cb1-5"><a href="#cb1-5"></a>        <span class="va">self</span>.color <span class="op">=</span> color</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="kw">def</span> drive(<span class="va">self</span>, speed):</span>
+<span id="cb1-8"><a href="#cb1-8"></a>        <span class="cf">if</span> speed <span class="op">&gt;</span> <span class="dv">100</span>:</span>
+<span id="cb1-9"><a href="#cb1-9"></a>            <span class="cf">return</span> <span class="st">"속도 위반"</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-11"><a href="#cb1-11"></a>            <span class="cf">return</span> <span class="st">"안전 운전"</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="kw">class</span> Taxi(Car):</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="kw">def</span> take_passengers(<span class="va">self</span>, passengers):</span>
+<span id="cb1-15"><a href="#cb1-15"></a>        <span class="cf">if</span> passengers <span class="op">&gt;</span> <span class="dv">4</span>:</span>
+<span id="cb1-16"><a href="#cb1-16"></a>            <span class="cf">return</span> <span class="st">"정원 초과"</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-18"><a href="#cb1-18"></a>            <span class="cf">return</span> <span class="st">"운전 가능"</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a></span>
+<span id="cb1-20"><a href="#cb1-20"></a>taxi1 <span class="op">=</span> Taxi(<span class="st">"현대차"</span>, <span class="st">"3000만원"</span>, <span class="st">"Yellow"</span>)</span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="bu">print</span>(taxi1.take_passengers(<span class="dv">7</span>)) </span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="bu">print</span>(taxi1.drive(<span class="dv">120</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>정원 초과
+속도 위반</code></pre>
+</div>
 </div>
 </section>
-<section id="python에서의-class-기본-구조-1" class="slide level2">
-<h2>Python에서의 Class 기본 구조</h2>
+<section id="polymorohism" class="slide level2">
+<h2>Polymorohism</h2>
+<p><strong>부모 클래스에서 물려받은 가상 함수를 자녀 클래스 내에서 오버라이딩 되어 사용되는 것</strong></p>
 <p><br></p>
-<div class="sourceCode" id="cb2" data-code-line-numbers="1|2-4|5-7"><pre class="sourceCode numberSource py number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">class</span> name:</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>): </span>
-<span id="cb2-3"><a href="#cb2-3"></a>    ....</span>
-<span id="cb2-4"><a href="#cb2-4"></a>    </span>
-<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">def</span> func(<span class="va">self</span>):</span>
-<span id="cb2-6"><a href="#cb2-6"></a>    ....</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    </span>
-<span id="cb2-8"><a href="#cb2-8"></a>  <span class="kw">def</span> ....(<span class="va">self</span>):</span>
-<span id="cb2-9"><a href="#cb2-9"></a>    ....</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="python의-class-구조-1-class" class="slide level2">
-<h2>python의 class 구조 1 : class</h2>
-<p><br></p>
-<div class="fragment fade-up">
-<p>class : 객체를 생성시키는 일종의 틀이다!</p>
+<div class="fragment fade-in">
+<ul>
+<li>부모 클래스에서 정의된 함수를 자녀 클래스에서도 사용하는 것!</li>
+</ul>
+<p>ex) 자동차, 트럭, 레이스카 모두 움직이는 기능이 있기 때문에, 동일하게 움직일 수 있다!</p>
 </div>
-<p><br></p>
-<div class="fragment fade-up">
+</section>
+<section id="polymorohism-예시" class="slide level2">
+<h2>Polymorohism 예시</h2>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">class</span> name:</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  <span class="kw">def</span> ...():</span>
-<span id="cb3-3"><a href="#cb3-3"></a>    ...</span>
-<span id="cb3-4"><a href="#cb3-4"></a>  </span>
-<span id="cb3-5"><a href="#cb3-5"></a>  <span class="kw">def</span> ...():</span>
-<span id="cb3-6"><a href="#cb3-6"></a>    ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">class</span> Truck:</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">def</span> drive(<span class="va">self</span>):</span>
+<span id="cb3-3"><a href="#cb3-3"></a>        <span class="bu">print</span>(<span class="st">"트럭 운행 중"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="kw">def</span> stop(<span class="va">self</span>):</span>
+<span id="cb3-6"><a href="#cb3-6"></a>        <span class="bu">print</span>(<span class="st">"트럭 정지"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="kw">class</span> Bus:</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    <span class="kw">def</span> drive(<span class="va">self</span>):</span>
+<span id="cb3-11"><a href="#cb3-11"></a>        <span class="bu">print</span>(<span class="st">"버스 운행 중"</span>)</span>
+<span id="cb3-12"><a href="#cb3-12"></a></span>
+<span id="cb3-13"><a href="#cb3-13"></a>    <span class="kw">def</span> stop(<span class="va">self</span>):</span>
+<span id="cb3-14"><a href="#cb3-14"></a>        <span class="bu">print</span>(<span class="st">"버스 정지"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15"></a></span>
+<span id="cb3-16"><a href="#cb3-16"></a></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="kw">class</span> Sport_car:</span>
+<span id="cb3-18"><a href="#cb3-18"></a>    <span class="kw">def</span> drive(<span class="va">self</span>):</span>
+<span id="cb3-19"><a href="#cb3-19"></a>        <span class="bu">print</span>(<span class="st">"스포츠카 운행 중"</span>)</span>
+<span id="cb3-20"><a href="#cb3-20"></a></span>
+<span id="cb3-21"><a href="#cb3-21"></a>    <span class="kw">def</span> stop(<span class="va">self</span>):</span>
+<span id="cb3-22"><a href="#cb3-22"></a>        <span class="bu">print</span>(<span class="st">"스포츠카 정지"</span>)</span>
+<span id="cb3-23"><a href="#cb3-23"></a></span>
+<span id="cb3-24"><a href="#cb3-24"></a></span>
+<span id="cb3-25"><a href="#cb3-25"></a><span class="kw">def</span> drive_car(car):</span>
+<span id="cb3-26"><a href="#cb3-26"></a>    car.drive()</span>
+<span id="cb3-27"><a href="#cb3-27"></a></span>
+<span id="cb3-28"><a href="#cb3-28"></a></span>
+<span id="cb3-29"><a href="#cb3-29"></a>truck <span class="op">=</span> Truck()</span>
+<span id="cb3-30"><a href="#cb3-30"></a>bus <span class="op">=</span> Bus()</span>
+<span id="cb3-31"><a href="#cb3-31"></a>sport_car <span class="op">=</span> Sport_car()</span>
+<span id="cb3-32"><a href="#cb3-32"></a></span>
+<span id="cb3-33"><a href="#cb3-33"></a>drive_car(truck)</span>
+<span id="cb3-34"><a href="#cb3-34"></a>drive_car(bus)</span>
+<span id="cb3-35"><a href="#cb3-35"></a>drive_car(sport_car)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>트럭 운행 중
+버스 운행 중
+스포츠카 운행 중</code></pre>
 </div>
 </div>
 </section>
-<section id="python의-class-구조-2-instance" class="slide level2">
-<h2>python의 class 구조 2 : instance</h2>
+<section id="encapsulation" class="slide level2">
+<h2>Encapsulation</h2>
+<p><strong>변수와 함수를 하나로 묶은 후, 실제 구현 내용의 일부를 외부에 감추는 것</strong></p>
 <p><br></p>
-<div class="fragment fade-up">
-<p>instance = class에 의해 정의된 object</p>
-</div>
 <div class="fragment fade-in">
+<ul>
+<li>객체의 속성과 기능을 하나로 묶는 것</li>
+<li>추가로, 객체의 일부 구현 내용을 외부로부터 수정하지 못하도록 막는 것</li>
+</ul>
+</div>
+</section>
+<section id="encapsulation-예제" class="slide level2">
+<h2>Encapsulation 예제</h2>
+<p><br></p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">class</span> name:</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="kw">def</span> ...():</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    <span class="cf">return</span> ...</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="kw">def</span> ...():</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    ...</span>
-<span id="cb4-6"><a href="#cb4-6"></a>    </span>
-<span id="cb4-7"><a href="#cb4-7"></a></span>
-<span id="cb4-8"><a href="#cb4-8"></a>a <span class="op">=</span> <span class="kw">class</span>() <span class="co"># 여기서 a가 바로 instance</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="python의-class-구조-3-method" class="slide level2">
-<h2>python의 class 구조 3 : method</h2>
-<p><br></p>
-<div class="fragment fade-up">
-<p>method = 쉽게 설명하여, class 안에서 정의된 함수</p>
-</div>
-<div class="fragment fade-in">
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">class</span> calculator:</span>
-<span id="cb5-2"><a href="#cb5-2"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, a, b):</span>
-<span id="cb5-3"><a href="#cb5-3"></a>        <span class="va">self</span>.a <span class="op">=</span> a</span>
-<span id="cb5-4"><a href="#cb5-4"></a>        <span class="va">self</span>.b <span class="op">=</span> b</span>
-<span id="cb5-5"><a href="#cb5-5"></a>        </span>
-<span id="cb5-6"><a href="#cb5-6"></a>    <span class="kw">def</span> add(<span class="va">self</span>): <span class="co">#method</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>        <span class="cf">return</span> a<span class="op">+</span>b</span>
-<span id="cb5-8"><a href="#cb5-8"></a>    </span>
-<span id="cb5-9"><a href="#cb5-9"></a>    <span class="kw">def</span> square(<span class="va">self</span>): <span class="co">#method</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>        <span class="cf">return</span> a<span class="op">*</span>b</span>
-<span id="cb5-11"><a href="#cb5-11"></a>    </span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">class</span> Mangling:</span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, age):</span>
+<span id="cb5-4"><a href="#cb5-4"></a>        <span class="va">self</span>.__set(name, age)</span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="kw">def</span> __set(<span class="va">self</span>, name, age):</span>
+<span id="cb5-7"><a href="#cb5-7"></a>        <span class="va">self</span>.__name <span class="op">=</span> name</span>
+<span id="cb5-8"><a href="#cb5-8"></a>        <span class="va">self</span>.__age <span class="op">=</span> age</span>
+<span id="cb5-9"><a href="#cb5-9"></a></span>
+<span id="cb5-10"><a href="#cb5-10"></a>    <span class="kw">def</span> getname(<span class="va">self</span>):</span>
+<span id="cb5-11"><a href="#cb5-11"></a>        <span class="cf">return</span> <span class="va">self</span>.__name</span>
 <span id="cb5-12"><a href="#cb5-12"></a></span>
-<span id="cb5-13"><a href="#cb5-13"></a>cal <span class="op">=</span> calculator(<span class="dv">1</span>,<span class="dv">2</span>)</span>
-<span id="cb5-14"><a href="#cb5-14"></a>cal.add() <span class="co"># method는 .(dot method)를 통해 사용할 수 있다!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="python의-class-구조-2-constructor" class="slide level2">
-<h2>python의 class 구조 2 : Constructor</h2>
-<p><br></p>
-<div class="fragment fade-up">
-<p>constructor : class에 초기 값을 설정</p>
-</div>
-<div>
-<ul>
-<li class="fragment"><p>constructor의 특징</p></li>
-<li class="fragment"><ol type="1">
-<li class="fragment">class 내에 객체를 생성한다.</li>
-</ol></li>
-<li class="fragment"><ol start="2" type="1">
-<li class="fragment">클래스의 초기값을 설정해서, 이전의 값을 초기화한다.</li>
-</ol></li>
-</ul>
-</div>
-<div class="fragment fade-in">
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">class</span> name:</span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name): <span class="co">#constructor 생성</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>    <span class="va">self</span>.name <span class="op">=</span> name</span>
-<span id="cb6-4"><a href="#cb6-4"></a>  <span class="kw">def</span> count(<span class="va">self</span>): <span class="co">#method 생성</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>    <span class="cf">return</span> <span class="bu">len</span>(<span class="va">self</span>.name)</span>
-<span id="cb6-6"><a href="#cb6-6"></a>    </span>
-<span id="cb6-7"><a href="#cb6-7"></a>a <span class="op">=</span> name(<span class="st">"홍길동"</span>) <span class="co">#constructor에 의해 초기값 설정</span></span>
-<span id="cb6-8"><a href="#cb6-8"></a>a.count() <span class="co">#method를 호출하여 초기 값을 활용</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="lecture-1을-마무리하며" class="slide level2">
-<h2>lecture 1을 마무리하며</h2>
-<p><br></p>
-<div>
-<ul>
-<li class="fragment">오늘은 Python에서 배우는 oop의 기초에 대해 배웠습니다.</li>
-<li class="fragment">oop가 무엇이며, class는 어떻게 활용하는지에 대해 개괄적으로 배웠습니다.</li>
-<li class="fragment">다음 lecture 2에서는 oop의 핵심 개념에 대해 배우겠습니다.</li>
-</ul>
+<span id="cb5-13"><a href="#cb5-13"></a>    <span class="kw">def</span> getage(<span class="va">self</span>):</span>
+<span id="cb5-14"><a href="#cb5-14"></a>        <span class="cf">return</span> <span class="va">self</span>.__age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="footer footer-default">
 
@@ -702,19 +578,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="lecture1_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="lecture2_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="lecture1_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="lecture1_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="lecture1_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="lecture1_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="lecture1_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="lecture2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="lecture2_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="lecture2_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="lecture2_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="lecture2_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="lecture1_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="lecture1_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="lecture1_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="lecture1_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="lecture2_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="lecture2_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="lecture2_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="lecture2_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

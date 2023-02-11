@@ -1,6 +1,8 @@
 ---
 title: "Object-Oriented Programming 1"
-format: revealjs
+format:
+  revealjs: 
+    theme: solarized
 editor: visual
 execute: 
   echo: true
@@ -14,8 +16,8 @@ execute:
 ::: incremental
 -   Object-Oriented Programming이란?
 -   프로그래밍 3대 paradigm
--   Python에서 oop란?
--   oop의 핵심 개념 1 : object & class
+-   객체란 무엇인가?
+-   oop의 핵심 개념 1 : class
 -   oop의 핵심 개념 2 : Constructor
 :::
 
@@ -37,31 +39,31 @@ A. 쉽게 말해, 프로그램을 객체 단위로 잘게 쪼개서 프로그래
 
 ## 프로그래밍 3대 Paradigm
 
-<br/> 
+<br/>
 
 <br/>
 
 ::: incremental
-**1. 절차지향 프로그래밍**
+-   **1. 절차지향 프로그래밍**
 
-**2. 객체지향 프로그래밍**
+-   **2. 객체지향 프로그래밍**
 
-**3. 함수형 프로그래밍**
+-   **3. 함수형 프로그래밍**
 :::
 
 ## 프로그래밍 3대 Paradigm
 
-<br/> 
+<br/>
 
 <br/>
 
-**1. 절차지향 프로그래밍** --\> Procedural Programming
+-   **1. 절차지향 프로그래밍** --\> Procedural Programming
 
-**2. 객체지향 프로그래밍** --\> Object-Oriented Programming
+-   **2. 객체지향 프로그래밍** --\> Object-Oriented Programming
 
-**3. 함수형 프로그래밍** --\> Funtional Programming
+-   **3. 함수형 프로그래밍** --\> Funtional Programming
 
-## 절차지향 프로그래밍
+## 절차지향 프로그래밍 {.smaller}
 
 **일이 진행되는 순서대로 프로그래밍하는 방법**
 
@@ -70,21 +72,21 @@ A. 쉽게 말해, 프로그램을 객체 단위로 잘게 쪼개서 프로그래
 ::: {.fragment .fade-in}
 *장점*
 
-- 코드의 가독성이 좋음.
-- 컴퓨터의 처리구조와 비슷해 실행 속도가 빠름.
+-   코드의 가독성이 좋음.
+-   컴퓨터의 처리구조와 비슷해 실행 속도가 빠름.
 :::
 
 ::: {.fragment .fade-in}
 *단점*
 
-- 각각의 코드가 순서에 민감하게 연결 되어있어, 유지보수 및 분석이 어려움.
+-   각각의 코드가 순서에 민감하게 연결 되어있어, 유지보수 및 분석이 어려움.
 :::
 
 ::: {.fragment .fade-up}
 --\> 대표적인 언어 : C, Fortran
 :::
 
-## 객체지향 프로그래밍
+## 객체지향 프로그래밍 {.smaller}
 
 **객체 단위로 쪼개서 프로그래밍하는 방법**
 
@@ -93,125 +95,254 @@ A. 쉽게 말해, 프로그램을 객체 단위로 잘게 쪼개서 프로그래
 ::: {.fragment .fade-in}
 *장점*
 
-- 코드의 재사용이 가능.(확장, 유지보수에 용이!)
-- 분석과 설계의 전환이 쉬움.
+-   코드의 재사용이 가능.(확장, 유지보수에 용이!)
+-   분석과 설계의 전환이 쉬움.
 :::
 
 ::: {.fragment .fade-in}
 *단점*
 
-- 처리 속도가 상대적으로 다소 느림.
-- 설계에 많은 시간이 소요됨.
+-   처리 속도가 상대적으로 다소 느림.
+-   설계에 많은 시간이 소요됨.
 :::
 
 ::: {.fragment .fade-up}
 --\> 대표적인 언어 : JAVA, C++, C#
 :::
 
-## 함수형 프로그래밍
+## 함수형 프로그래밍 {.smaller}
 
 **순수 함수를 사용해, 빨리 처리하는데 초점을 둔 방법**
 
 <br/>
 
 ::: {.fragment .fade-in}
-*장점* 
+*장점*
 
-- 함수의 동작부가 간결해지기 때문에, 객체지향 프로그래밍에 비해 코드 이해도와 가독성이 좋아짐.
-- 테스트가 쉬움.
+-   함수의 동작부가 간결해지기 때문에, 객체지향 프로그래밍에 비해 코드 이해도와 가독성이 좋아짐.
+-   테스트가 쉬움.
 :::
 
 ::: {.fragment .fade-in}
 *단점*
 
-- 외부 데이터 혹은 내부 데이터의 상태를 조작할 수 없음.
+-   외부 데이터 혹은 내부 데이터의 상태를 조작할 수 없음.
 :::
 
 ::: {.fragment .fade-up}
---\> 대표적인 언어 : Haskell, OCaml
+--\> 대표적인 언어 : Julia, Haskell, OCaml
 :::
 
-## Why are we code through Object-Oriented Programming?
+## Why are we code through Object-Oriented Programming? {.smaller}
 
 <br/>
 
-::: {.fragment .fade-in}
+::: {.fragment .fade-in-then-semi-out}
 -   현대 사회에 들어서 더 복잡한 어플리케이션에 대한 수요가 증가
 -   But, 기존의 절차지향형 프로그래밍 만으로는 현대 사회에서 요구하는 프로그램 제작에 어려움이 있음
 -   이를 보완하기 위해, '실제 세계와 비슷한 방법의 모델링'이 필요해짐
 :::
 
+<br/>
+
 ::: {.fragment .fade-up}
 -   그것이 바로 **객체지향형 프로그래밍(Object-Oriented Programming)!**
 :::
 
+## 객체(object)란 무엇인가?
+
+<br/>
+
+::: {.fragment .fade-in-then-semi-out}
+object : 프로그램에서 저장되는 모든 데이터, **즉 프로그램에 저장되는 내용은 모두 Object이다!**
+
+또한 각 object는 **identity와 type, value**를 가진다!
+:::
+
+<br/>
+
+::: {.fragment .fade-in}
+그렇다면, identity, type, value란 무엇일까?
+:::
+
+## 객체의 속성 {.smaller}
+
+::: {.fragment .fade-in-then-semi-out}
+**identity : 객체가 메모리에 저장된 위치를 가리키는 포인터, 즉 메모리의 번지수**
+
+-   Object의 Identity는 object의 속성 값에 관계없이 다른 객체와 구별되기 위해 존재한다!
+:::
+
+<br/>
+
+::: {.fragment .fade-in-then-semi-out}
+**type : 객체의 내부적인 표현 형태, 즉 type에 따라 객체에게 적용가능한 연산과 Method가 달라진다.**
+
+-   ex) string type에게는 '-' 연산자를 사용할 수 없다.
+:::
+
+<br/>
+
+::: {.fragment .fade-in}
+**value : 객체에 정의된 값.**
+
+-   ex) a = 10은 프로그래밍에서 a라는 변수에 10이라는 값을 할당하는 것을 의미한다.
+:::
 
 ## Python에서 OOP란?
 
 <br/>
 
 ::: {.fragment .fade-in}
-Q. Python에서 어떻게 객체지향 프로그래밍을 구현할 수 있나요? 
+Q. Python에서 어떻게 객체지향 프로그래밍을 구현할 수 있나요?
 :::
 
 <br/>
 
-:::{.fragment .fade-up}
-A. 그거슨 바로 class!
+::: {.fragment .fade-up}
+A. class 라는 기능을 통해 구현이 가능하다!
 :::
 
+## Python에서의 Class 기본 구조
 
-## Python에서의 Class 구조
+<br/>
 
-``` {.py code-line-numbers="1|2-3|4-5"}
+```{python}
 class name:
   def __init__(self): 
     ....
+    
   def func(self):
+    ....
+    
+  def ....(self):
     ....
 ```
 
-
-## oop의 핵심 개념 1 : object & class
-
-<br/>
-
-
-
-
-
-
-## oop의 핵심 개념 1 : object & class
+## Python에서의 Class 기본 구조
 
 <br/>
 
-:::{.fragment .fade-up}
+``` {.py code-line-numbers="1|2-4|5-7"}
+class name:
+  def __init__(self): 
+    ....
+    
+  def func(self):
+    ....
+    
+  def ....(self):
+    ....
+```
+
+## python의 class 구조 1 : class
+
+<br/>
+
+::: {.fragment .fade-up}
+class : 객체를 생성시키는 일종의 틀이다!
+:::
+
+<br/>
+
+::: {.fragment .fade-up}
 ```{python}
 class name:
   def ...():
-
+    ...
+  
+  def ...():
+    ...
 ```
-
 :::
 
-
-## oop의 핵심 개념 2 : Constructor
-
-<br/>
-
-
-
-
-
-## oop의 핵심 개념 2 : Constructor
+## python의 class 구조 2 : instance
 
 <br/>
 
-:::{.fragment .fade-up}
-``` {.py code-line-numbers="1|2-3"}
+::: {.fragment .fade-up}
+instance = class에 의해 정의된 object
+:::
+
+::: {.fragment .fade-in}
+```{python}
 class name:
-  def __init__(self): 
-    ....
-```
+  def ...():
+    return ...
+  def ...():
+    ...
+    
 
+a = class() # 여기서 a가 바로 instance
+```
+:::
+
+## python의 class 구조 3 : method
+
+<br/>
+
+::: {.fragment .fade-up}
+method = 쉽게 설명하여, class 안에서 정의된 함수
+:::
+
+::: {.fragment .fade-in}
+```{python}
+class calculator:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+        
+    def add(self): #method
+        return a+b
+    
+    def square(self): #method
+        return a*b
+    
+
+cal = calculator(1,2)
+cal.add() # method는 .(dot method)를 통해 사용할 수 있다!
+```
+:::
+
+## python의 class 구조 2 : Constructor
+
+<br/>
+
+::: {.fragment .fade-up}
+constructor : class에 초기 값을 설정
+:::
+
+::: incremental
+-   constructor의 특징
+
+-   
+
+    1.  class 내에 객체를 생성한다.
+
+-   
+
+    2.  클래스의 초기값을 설정해서, 이전의 값을 초기화한다.
+:::
+
+::: {.fragment .fade-in}
+```{python}
+class name:
+  def __init__(self, name): #constructor 생성
+    self.name = name
+  def count(self): #method 생성
+    return len(self.name)
+    
+a = name("홍길동") #constructor에 의해 초기값 설정
+a.count() #method를 호출하여 초기 값을 활용
+```
+:::
+
+## lecture 1을 마무리하며
+
+<br/>
+
+::: incremental
+-   오늘은 Python에서 배우는 oop의 기초에 대해 배웠습니다.
+-   oop가 무엇이며, class는 어떻게 활용하는지에 대해 개괄적으로 배웠습니다.
+-   다음 lecture 2에서는 oop의 핵심 개념에 대해 배우겠습니다.
 :::

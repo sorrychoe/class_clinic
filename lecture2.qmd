@@ -1,12 +1,31 @@
 ---
 title: "Object-Oriented Programming 2"
-format: revealjs
+format:
+  revealjs: 
+    theme: solarized
 editor: visual
 execute: 
   echo: true
   eval: true
 ---
 
+## 목차
+
+<br/>
+
+::: incremental
+
+-   oop를 하기 위해선 알아야 하는 것들?
+-   oop의 핵심 개념들
+-   Abstraction
+-   Inhetritance
+-   Polymorohism
+-   Encapsulation
+:::
+
+## oop를 하기 위해서 알아야 하는 것들?
+
+![](images\oop 조직도.png){.absolute top=100 left=250 width="600" height="650"}
 
 ## oop의 핵심 개념들
 
@@ -145,6 +164,8 @@ drive_car(sport_car)
 :::
 
 ## Encapsulation 예제
+
+<br/>
 
 ```{python, echo = TRUE}
 class Mangling:
