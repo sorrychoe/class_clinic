@@ -17,8 +17,10 @@ execute:
 -   Object-Oriented Programming이란?
 -   프로그래밍 3대 paradigm
 -   객체란 무엇인가?
--   oop의 핵심 개념 1 : class
--   oop의 핵심 개념 2 : Constructor
+-   oop의 핵심 개념 1 : Class
+-   oop의 핵심 개념 2 : Instance
+-   oop의 핵심 개념 3 : Method
+-   oop의 핵심 개념 4 : Constructor
 :::
 
 ## Object-Oriented Programming이란?
@@ -304,7 +306,7 @@ cal.add() # method는 .(dot method)를 통해 사용할 수 있다!
 ```
 :::
 
-## python의 class 구조 2 : Constructor
+## python의 class 구조 4 : Constructor
 
 <br/>
 
