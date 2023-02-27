@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class GradientDescent:
+    """this class have to learn at main.py"""
     def __init__(self, learning_rate, max_iterations, threshold):
         self.learning_rate = learning_rate
         self.max_iterations = max_iterations
