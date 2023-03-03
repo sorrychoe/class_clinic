@@ -7,7 +7,7 @@ class Shape:
         pass
     
     def name(self):
-        print("I'm shape!")
+        return "I'm shape!"
         
 class Circle(Shape):
     def __init__(self, x, y, r):
