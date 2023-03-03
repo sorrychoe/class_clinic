@@ -1,10 +1,10 @@
-from class_example.GradientDescent import GradientDescent
+from deeplearning_example.GradientDescent import GradientDescent
 
 import numpy as np
 import matplotlib.pyplot as plt
 # Generate some data
 X = np.random.rand(100, 2)
-y = np.dot(X, np.array([2, 3])) + np.random.normal(0, 0.1, size=(100,))
+y = np.dot(X, np.array([2, 3])) + np.random.normal(0, 0.1, size=(100,))10
 
 
 # get learning rate, max_iter, threshold
