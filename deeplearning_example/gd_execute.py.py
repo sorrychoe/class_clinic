@@ -1,4 +1,4 @@
-from deeplearning_example.GradientDescent import GradientDescent
+from GradientDescent import GradientDescent
 
 import numpy as np
 import matplotlib.pyplot as plt
